@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
-
+dotenv.config();
 // Models
 const { User } = require('../models/user.model');
 const { Meal } = require('../models/meal.model');
@@ -75,7 +75,7 @@ const loginUser = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
 
   const user = await User.findOne({
-    where: { email, status: 'active' },
+    where: { email },
   });
 
   if (!user || !(await bcrypt.compare(password, user.password))) {
