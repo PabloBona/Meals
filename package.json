@@ -9,7 +9,6 @@
     "start:prod": "SET NODE_ENV=production&nodemon app.js",
     "debug": "ndb app.js"
   },
-  
   "author": "Pablo Bonasera",
   "license": "ISC",
   "dependencies": {
@@ -23,6 +22,6 @@
     "sequelize": "^6.22.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.21"
   }
 }

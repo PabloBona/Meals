@@ -34,5 +34,9 @@ app.all('*', (req, res) => {
     message: `${req.method} ${req.url} does not exists in our server`,
   });
 });
+const PORT = 5232;
+app.listen(PORT, function () {
+  console.log('Server is running on port ' + PORT);
+});
 
 module.exports = { app };
