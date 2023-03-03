@@ -44,7 +44,7 @@ const protectReviewOwners = (req, res, next) => {
   if (sessionUser.id !== review.userId) {
     return next(new AppError('This review does not belong to you.', 403));
   }
-
+  req.sessionUser = User;
   next();
 };
 
